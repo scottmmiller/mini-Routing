@@ -151,7 +151,7 @@ Notice we have a side menu and then we have our ng-view that will change dependi
 * 3) Now we're going to set up our routes. Here is the criteria.
      - When the user is at the index page ('/'), use ```homeTmpl.html``` as the templateUrl and use ```homeCtrl``` as the controller.
      - When the user is at the settings page ('/settings'), use ```settingsTmpl.html``` as the templateUrl and use ```settingsCtrl``` as the controller.
-  - When the user is at the products page ('/products/:id'), use ```productTmpl.html``` as the templateUrl and use ```productsCtrl``` as the controller. Notive that products has a ```/:id``` at the end of it. This is because we're going to tell our app which product the user is looking at based on which link they clicked. For example, if the user clicks on <a href="/products/shoes"/> Then in our controller ```$routeParams.id``` (id correlating with the /:id from earlier)is going to be 'shoes'. This is a little bit tricky, ask for help if you need it.
+  - When the user is at the products page ('/products/:id'), use ```productTmpl.html``` as the templateUrl and use ```productsCtrl``` as the controller. Notice that products has a ```/:id``` at the end of it. This is because we're going to tell our app which product the user is looking at based on which link they clicked. For example, if the user clicks on <a href="/products/shoes"/> Then in our controller ```$routeParams.id``` (id correlating with the /:id from earlier)is going to be 'shoes'. This is a little bit tricky, ask for help if you need it.
   - If the user isn't at any of those URLs, redirect them to the index.
 * Here's what app.js should look like when you're done.
 ```javascript
@@ -176,7 +176,7 @@ app.config(function($routeProvider){
     })
 });
 ```
-###Step 5: Adding to Template
+###Step 6: Adding to Template
 * In order for us to know if our routes are working, we need to go and edit all of our templates to show some sort of confirmation that we're on a certain page. Make the following changes
 * settingsTmpl.html should look like this
 ```html
@@ -196,7 +196,7 @@ app.config(function($routeProvider){
 * Test that everything is working by clicking on a few of the links and seeing if the templates change based on which link you clicked on. If it's not working, first check your console and see if there are any errors. Try to debug, if you debug for 5 minutes and are still stuck, ask for help.
 * 
 
-###Step 6: Fixing Product Pages
+###Step 7: Fixing Product Pages
 * The last thing we have to do is show certain product data depending on which page the user is it. For example, if the user is on the shoes page, we want to show them the shoes data. If they're on the socks page, we want to show them the socks data. Remember that in our index.html page our menu looks like this. 
 ```html
     <div class="menu">
