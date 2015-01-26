@@ -2,13 +2,13 @@ var app = angular.module('miniRouting', ['ngRoute']);
 
 app.config(function($routeProvider) {
 	$routeProvider.when('/', {
-		templateUrl: 'homeTmpl.html',
+		templateUrl: 'js/home/homeTmpl.html',
 		controller: 'homeCtrl'
 	}).when('/settings', {
-		templateUrl: 'settingsTmpl.html',
+		templateUrl: 'js/settings/settingsTmpl.html',
 		controller: 'settingsCtrl'
 	}).when('/products:id', {
-		templateUrl: 'productsTmpl.html',
+		templateUrl: 'js/products/productsTmpl.html',
 		controller: 'productsCtrl'
 	}).otherwise('/');
 
