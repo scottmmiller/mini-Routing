@@ -1,7 +1,6 @@
 var app = angular.module('miniRouting');
 
 app.service('productsService', function() {
-	this.shoeData = [
   this.shoeData = [
     {
       type: 'Nike',

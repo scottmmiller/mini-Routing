@@ -197,7 +197,7 @@ app.config(function($routeProvider){
 * 
 
 ###Step 7: Fixing Product Pages
-* The last thing we have to do is show certain product data depending on which page the user is it. For example, if the user is on the shoes page, we want to show them the shoes data. If they're on the socks page, we want to show them the socks data. Remember that in our index.html page our menu looks like this. 
+* The last thing we have to do is show certain product data depending on which page the user is at. For example, if the user is on the shoes page, we want to show them the shoes data. If they're on the socks page, we want to show them the socks data. Remember that in our index.html page our menu looks like this. 
 ```html
     <div class="menu">
       <ul>
@@ -213,7 +213,7 @@ app.config(function($routeProvider){
       </ul>
     </div>
 ```
-* So we now that in our controller, $routeParams.id (because of :/id in our router) will be either 'socks' or 'shoes' depending on which page the user is in. With this knowledge, we can add a simple if statement to check which product page the user is on.
+* So we know that in our controller, $routeParams.id (because of :/id in our router) will be either 'socks' or 'shoes' depending on which page the user is in. With this knowledge, we can add a simple if statement to check which product page the user is on.
 * In your products controller first inject ```$routeParams``` and ```productService``` into your controller. 
 * Now write an if statement, if ```$routeParams.id``` is equal to 'shoes', then ```$scope.productData``` should be set to ```productService.shoeData```. If ```$routeParams.id``` is equal to 'socks', then ```$scope.productData``` should be set to ```productService.sockData```.
 * Now we know we have data on the scope that is equal to certain product data depending on which product the user is looking at.

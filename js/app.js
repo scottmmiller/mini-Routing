@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
 	}).when('/settings', {
 		templateUrl: 'js/settings/settingsTmpl.html',
 		controller: 'settingsCtrl'
-	}).when('/products:id', {
+	}).when('/products/:id', {
 		templateUrl: 'js/products/productsTmpl.html',
 		controller: 'productsCtrl'
 	}).otherwise('/');
